@@ -8,9 +8,9 @@ jobs:
         uses: actions/checkout@v6
       - name: output the current directory
         run: tree .
-      - name: Get into directory
-        run: cd second-action-react & npm ci
       - name: Install Dependencies
+        working-directory: second-action-react
         run: npm ci
       - name: Run Tests
+        working-directory: second-action-react
         run: npm run test
