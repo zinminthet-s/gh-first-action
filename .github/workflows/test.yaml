@@ -7,7 +7,7 @@ jobs:
       - name: Get Code
         uses: actions/checkout@v6
       - name: output the current directory
-        run: pwd & ls
+        run: tree .
       - name: Get into directory
         run: cd second-action-react
       - name: Install Dependencies
