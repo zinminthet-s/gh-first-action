@@ -9,4 +9,4 @@ jobs:
       - name: Print Greeting
         run: echo "deployment"
       - name: Print goodbye
-        run: ehco "Good bye"
+        run: echo "Good bye"
