@@ -3,10 +3,10 @@ on: workflow_dispatch
 jobs:
   gather-dependencies:
     runs-on: ubuntu-latest
-      steps:
-        - name:  install dependences
-          run: cd expendicutre
-        - name: run test
-          run: npm run test
-        - name: deploy
-          run: npm run deploy
+    steps:
+      - name: install dependences
+        run: cd expendicutre
+      - name: run test
+        run: npm run test
+      - name: deploy
+        run: npm run deploy
