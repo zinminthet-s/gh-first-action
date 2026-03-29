@@ -1,7 +1,7 @@
 name: Deploy Website
 on: [push, workflow_dispatch]
 jobs:
-  RUN TEST:
+  TEST:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -14,7 +14,7 @@ jobs:
       - name: RUN TEST
         run: npm run test
   DEPLOY:
-    needs: [RUN TEST]
+    needs: [TEST]
     runs-on: ubuntu-latest
     steps:
       - name: Build Project
