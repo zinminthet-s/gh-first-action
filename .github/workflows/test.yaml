@@ -7,7 +7,7 @@ jobs:
       - name: Get Code
         uses: actions/checkout@v6
       - name: output the current directory
-        run: pwd
+        run: pwd & ls
       - name: Get into directory
         run: cd second-action-react
       - name: Install nodejs
