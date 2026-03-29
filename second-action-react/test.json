@@ -8,7 +8,7 @@
   "numFailedTests": 0,
   "numPendingTests": 0,
   "numTodoTests": 0,
-  "startTime": 1774766055464,
+  "startTime": 1774771771567,
   "success": true,
   "testResults": [
     {
@@ -32,12 +32,12 @@
           "fullName": " MainContent should show the help area after clicking the button",
           "status": "passed",
           "title": "should show the help area after clicking the button",
-          "duration": 40,
+          "duration": 28,
           "failureMessages": []
         }
       ],
-      "startTime": 1774766056910,
-      "endTime": 1774766056982,
+      "startTime": 1774771773093,
+      "endTime": 1774771773153,
       "status": "passed",
       "message": "",
       "name": "C:/Users/PULSE GL76/devop-journey/gh-first-action/second-action-react/src/components/MainContent.test.jsx"
