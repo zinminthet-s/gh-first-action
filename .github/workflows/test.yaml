@@ -3,14 +3,15 @@ on: push
 jobs:
   tests:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: second-action-react
     steps:
       - name: Get Code
         uses: actions/checkout@v6
       - name: output the current directory
         run: tree .
       - name: Install Dependencies
-        working-directory: second-action-react
         run: npm ci
       - name: Run Tests
-        working-directory: second-action-react
         run: npm run test
