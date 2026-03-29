@@ -1,12 +1,12 @@
-name: Deploy react website
+name: Deploy a static website
 on: workflow_dispatch
 jobs:
-  gather-dependencies:
+  Gather-Dependencies:
     runs-on: ubuntu-latest
     steps:
-      - name: install dependences
-        run: cd expendicutre
-      - name: run test
+      - name: Install Dependencies
+        run: npm ci
+      - name: Integration test
         run: npm run test
-      - name: deploy
-        run: npm run deploy
+      - name: Deploy
+        run: npm run build
