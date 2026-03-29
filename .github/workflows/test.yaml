@@ -9,9 +9,7 @@ jobs:
       - name: output the current directory
         run: pwd & ls
       - name: Get into directory
-        run:
-          cd second-action-react
-          ls
+        run: cd second-action-react & ls
       - name: Install Dependencies
         run: npm ci
       - name: Run Tests
