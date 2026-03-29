@@ -34,7 +34,7 @@ jobs:
       - name: Run Tests
         run: npm run test
   deploy:
-    needs: [test, unitest]
+    needs: [test, unit-test]
     runs-on: ubuntu-latest
     defaults:
       run:
