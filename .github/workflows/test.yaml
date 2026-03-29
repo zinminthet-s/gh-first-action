@@ -10,12 +10,6 @@ jobs:
         run: pwd & ls
       - name: Get into directory
         run: cd second-action-react
-      - name: Install nodejs
-        uses: actions/setup-node@v4
-        with: { node-version: 18, cache: "npm" }
-
-      - name: Change into product directory
-        run: cd second-action-react
       - name: Install Dependencies
         run: npm ci
       - name: Run Tests
