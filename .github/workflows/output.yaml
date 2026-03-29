@@ -3,9 +3,6 @@ on: [push, workflow_dispatch]
 jobs:
   info:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: second-action-react
     steps:
       - name: OUTPUT Github context
-        run: echo "${{ github }}"
+        run: echo "${{ toJSON(github) }}"
