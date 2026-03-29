@@ -1,0 +1,27 @@
+name: Deploy Website
+on: [push, workflow_dispatch]
+jobs:
+  RUN TEST:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: second-action-react
+    steps:
+      - name: GET CODE
+        uses: actions/checkout@v6
+      - name: INSTALL DEPENDENCIES
+        run: npm ci
+      - name: RUN TEST
+        run: npm run test
+  DEPLOY:
+    needs: [RUN TEST]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Project
+        run: npm run build
+      - name: Deploy
+        run: ehco "Deploying....."
+      - name: OUTPUT
+        run: echo "Successfully deployed ${{ toJSON(github) }}"
+      - name: OWNER
+        run: echo "${{ github.actor }} is the owner"
